@@ -1,122 +1,302 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "theme": "maple",
+  "name": "AirTrigger",
+  "description": "AirTrigger lets you build and run AI agents through Claude Code — no coding required. Describe what you want in natural language, and AirTrigger handles queuing, retries, scheduling, and monitoring.",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#D97757",
+    "light": "#E0976E",
+    "dark": "#D97757"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/images/favicon.png",
+  "contextual": {
+    "options": ["copy", "view", "claude"]
+  },
   "navigation": {
-    "tabs": [
+    "dropdowns": [
       {
-        "tab": "Guides",
+        "dropdown": "Documentation",
+        "description": "Resources for AirTrigger",
+        "icon": "book-open",
         "groups": [
           {
             "group": "Getting started",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "introduction",
+              "quick-start",
+              "how-it-works"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Using AirTrigger with Claude Code",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "building-with-ai",
+              {
+                "group": "MCP Server",
+                "pages": ["mcp-introduction", "mcp-tools"]
+              },
+              "skills",
+              "mcp-agent-rules"
             ]
           },
           {
-            "group": "Writing content",
+            "group": "Core concepts",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
+              {
+                "group": "Agents",
+                "pages": ["tasks/overview", "tasks/schemaTask", "tasks/scheduled"]
+              },
+              "triggering",
+              "runs",
+              "apikeys",
+              "queue-concurrency"
             ]
           },
           {
-            "group": "AI tools",
+            "group": "Dashboard",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "run-tests",
+              "troubleshooting-alerts",
+              "replaying",
+              "bulk-actions",
+              "observability/query",
+              "observability/dashboards"
             ]
+          },
+          {
+            "group": "Deployment",
+            "pages": [
+              "deployment/overview",
+              "deploy-environment-variables",
+              "github-actions"
+            ]
+          },
+          {
+            "group": "Help",
+            "pages": ["community", "help-email"]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "dropdown": "Guides",
+        "description": "Learn what you can build",
+        "icon": "books",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "AI Agents",
             "pages": [
-              "api-reference/introduction"
+              "guides/ai-agents/overview",
+              "guides/ai-agents/claude-code-trigger",
+              "guides/ai-agents/generate-translate-copy",
+              "guides/ai-agents/route-question",
+              "guides/ai-agents/respond-and-check-content",
+              "guides/ai-agents/translate-and-refine",
+              "guides/ai-agents/verify-news-article"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "Use cases",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "guides/use-cases/overview",
+              "guides/use-cases/data-processing-etl",
+              "guides/use-cases/media-generation",
+              "guides/use-cases/media-processing",
+              "guides/use-cases/marketing"
             ]
           }
         ]
       }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
+    ]
   },
   "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "light": "/logo/light.png",
+    "dark": "/logo/dark.png",
+    "href": "https://airtrigger.io"
   },
-  "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+  "api": {
+    "openapi": ["openapi.yml", "v3-openapi.yaml"],
+    "playground": {
+      "display": "simple"
     }
   },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+  "styling": {
+    "codeblocks": {
+      "theme": "css-variables"
+    }
+  },
+  "appearance": {
+    "default": "dark",
+    "strict": true
+  },
+  "background": {
+    "color": {
+      "light": "#fff",
+      "dark": "#121317"
+    }
+  },
+  "navbar": {
+    "primary": {
+      "type": "github",
+      "href": "https://github.com/buildwithmoses/airtrigger-platform"
+    }
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/buildwithmoses/airtrigger-platform"
+    },
+    "links": [
+      {
+        "header": "Product",
+        "items": [
+          {
+            "label": "Dashboard",
+            "href": "https://airtrigger.io"
+          },
+          {
+            "label": "Status",
+            "href": "https://status.airtrigger.io"
+          }
+        ]
+      },
+      {
+        "header": "Company",
+        "items": [
+          {
+            "label": "Blog",
+            "href": "https://airtrigger.io/blog"
+          },
+          {
+            "label": "Contact",
+            "href": "https://airtrigger.io/contact"
+          }
+        ]
+      }
+    ]
+  },
+  "redirects": [
+    {
+      "source": "/v3/feature-matrix",
+      "destination": "https://feedback.trigger.dev/roadmap"
+    },
+    {
+      "source": "/v3/upgrading-from-v2",
+      "destination": "/guides/use-cases/upgrading-from-v2"
+    },
+    {
+      "source": "/v3/open-source-self-hosting",
+      "destination": "/open-source-self-hosting"
+    },
+    {
+      "source": "/v3/:slug*",
+      "destination": "/:slug*"
+    },
+    {
+      "source": "/reattempting-replaying",
+      "destination": "/replaying"
+    },
+    {
+      "source": "/tasks-overview",
+      "destination": "/tasks/overview"
+    },
+    {
+      "source": "/tasks-scheduled",
+      "destination": "/tasks/scheduled"
+    },
+    {
+      "source": "/trigger-folder",
+      "destination": "/config/config-file"
+    },
+    {
+      "source": "/trigger-config",
+      "destination": "/config/config-file"
+    },
+    {
+      "source": "/guides/frameworks/introduction",
+      "destination": "/guides/introduction"
+    },
+    {
+      "source": "/guides/examples/intro",
+      "destination": "/guides/introduction"
+    },
+    {
+      "source": "/examples/:slug*",
+      "destination": "/guides/examples/:slug*"
+    },
+    {
+      "source": "/realtime",
+      "destination": "/realtime/overview"
+    },
+    {
+      "source": "/runs-and-attempts",
+      "destination": "/runs"
+    },
+    {
+      "source": "/frontend/react-hooks",
+      "destination": "/realtime/react-hooks/overview"
+    },
+    {
+      "source": "/frontend/overview",
+      "destination": "/realtime/auth"
+    },
+    {
+      "source": "/frontend/react-hooks/overview",
+      "destination": "/realtime/react-hooks/overview"
+    },
+    {
+      "source": "/frontend/react-hooks/realtime",
+      "destination": "/realtime/react-hooks/realtime"
+    },
+    {
+      "source": "/frontend/react-hooks/triggering",
+      "destination": "/realtime/react-hooks/triggering"
+    },
+    {
+      "source": "/realtime/backend",
+      "destination": "/realtime/backend/overview"
+    },
+    {
+      "source": "/realtime/streams",
+      "destination": "/realtime/backend/streams"
+    },
+    {
+      "source": "/realtime/react-hooks",
+      "destination": "/realtime/react-hooks/overview"
+    },
+    {
+      "source": "/realtime/subscribe-to-run",
+      "destination": "/realtime/backend/subscribe"
+    },
+    {
+      "source": "/realtime/subscribe-to-runs-with-tag",
+      "destination": "/realtime/backend/subscribe"
+    },
+    {
+      "source": "/realtime/subscribe-to-batch",
+      "destination": "/realtime/backend/subscribe"
+    },
+    {
+      "source": "/management/projects/runs",
+      "destination": "/management/overview"
+    },
+    {
+      "source": "/guides/cursor-rules",
+      "destination": "/mcp-agent-rules"
+    },
+    {
+      "source": "/agents/rules/overview",
+      "destination": "/mcp-agent-rules"
+    },
+    {
+      "source": "/upgrade-to-v4",
+      "destination": "/migrating-from-v3"
+    },
+    {
+      "source": "/insights/query",
+      "destination": "/observability/query"
+    },
+    {
+      "source": "/insights/metrics",
+      "destination": "/observability/dashboards"
     }
-  }
+  ]
 }

@@ -1,0 +1,60 @@
+---
+title: "Using AirTrigger with Claude Code"
+sidebarTitle: "Overview"
+description: "Connect Claude Code to AirTrigger and manage your AI agents through natural language."
+---
+
+## Quick setup
+
+AirTrigger is designed to be used entirely through Claude Code. Install the MCP server and you're ready to go — no coding required.
+
+<Steps>
+
+<Step title="Install the MCP Server">
+  Give Claude Code direct access to AirTrigger — create agents, trigger runs, deploy projects, and monitor everything through natural language.
+
+  ```bash
+  npx trigger.dev@latest install-mcp
+  ```
+
+  [Learn more about setup →](/mcp-introduction)
+</Step>
+
+<Step title="Start building">
+  Once the MCP server is connected, just tell Claude Code what you want:
+
+  - *"Create an agent that checks my website every hour and alerts me if it's down"*
+  - *"Trigger my data-sync agent with this payload"*
+  - *"Show me the latest runs for my email agent"*
+  - *"Deploy my project to production"*
+</Step>
+
+</Steps>
+
+## What Claude Code can do with AirTrigger
+
+| Action | Example prompt |
+|:-------|:---------------|
+| **Create agents** | *"Create an agent that processes uploaded images"* |
+| **Trigger runs** | *"Run my scraper agent with url: example.com"* |
+| **Monitor runs** | *"Show me failed runs from the last 24 hours"* |
+| **Deploy** | *"Deploy my project to production"* |
+| **Search docs** | *"How do I set up a scheduled agent?"* |
+| **Manage projects** | *"List all my projects"* |
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="MCP Server setup" icon="plug" href="/mcp-introduction">
+    Detailed installation and configuration for Claude Code.
+  </Card>
+  <Card title="MCP Tools reference" icon="wrench" href="/mcp-tools">
+    Every tool available to Claude Code through the MCP server.
+  </Card>
+  <Card title="Agent concepts" icon="bolt" href="/tasks/overview">
+    Understand how agents, runs, queues, and schedules work.
+  </Card>
+  <Card title="AI Agent guides" icon="sparkles" href="/guides/ai-agents/overview">
+    Example agent patterns and use cases.
+  </Card>
+</CardGroup>
