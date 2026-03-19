@@ -1,11 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 60" width="340" height="60">
-  <svg x="0" y="2" width="56" height="56" viewBox="0 0 512 512">
-    <rect x="32" y="32" width="448" height="448" rx="80" ry="80" fill="#D97757"/>
-    <g transform="translate(256,256) rotate(-5)">
-      <polygon points="-120,10 130,-70 -40,20" fill="#FFFFFF"/>
-      <polygon points="-40,20 130,-70 -20,90" fill="#E0E0E0"/>
-      <polygon points="-40,20 -20,90 -10,30" fill="#CCCCCC"/>
-    </g>
-  </svg>
-  <text x="66" y="42" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-style="italic" fill="#1a1a1a">AirTrigger</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="40" height="40">
+  <rect x="32" y="32" width="448" height="448" rx="80" ry="80" fill="#D97757"/>
+  <g transform="translate(256,256) rotate(-5)">
+    <polygon points="-120,10 130,-70 -40,20" fill="#FFFFFF"/>
+    <polygon points="-40,20 130,-70 -20,90" fill="#E0E0E0"/>
+    <polygon points="-40,20 -20,90 -10,30" fill="#CCCCCC"/>
+  </g>
 </svg>
